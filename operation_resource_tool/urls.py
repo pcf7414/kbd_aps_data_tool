@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
+from django.conf.urls import url
 
 urlpatterns=[
- path('',views.index, name='index')
+ url(r'^converter/$',views.converter, name='converter'),
+ url(r'^upload/$', views.converter_upload,name='upload')
 ]
