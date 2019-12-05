@@ -1,3 +1,4 @@
+
 import os
 
 from django.http import HttpResponse
@@ -8,37 +9,22 @@ from kbd_aps_data_tool import settings
 from operation_resource_tool.common import ResponseMessage, render_json
 
 
+
+from django.shortcuts import render, redirect
+
+
 def index(request):
-    return render(request, 'index.html')
+    # return render(request, 'index.html')
+    return redirect('converter')
 
-# def init_data(request):
-#     # message = ResponseMessage()
-#     message = {
-#         'result':True,
-#         'content':{'item_project':[{'name':'物料机种1','value':'物料机种1url'}],
-#         'project_attribute':[{'name':'机种属性1','value':'机种属性1url'}]}
-#
-#     }
-#
-#     return render(request,'index.html',message,status=200)
 
-# def uploda_data(request):
-#     message = ResponseMessage
-#     files = request.FILES.getlist("forecastfile")
-#     if files == None or len(files) <= 0:
-#         message.message = '不能上传空文件'
-#         return render_json(message)
-#
-# =======
-#     #return render(request, 'index.html')
-#     return redirect('converter')
 
 def converter(request):
-    context ={'files':{
-        'product_attribute':[{'name':'a.xlsx','value':'data/a-uuid.a.xlsx'}],
-        'item_project':[{'name':'a.xlsx','value':'data/a-uuid.a.xlsx'}]
+    context = {'files': {
+        'product_attribute': [{'name': 'a.xlsx', 'value': 'data/a-uuid.a.xlsx'}],
+        'item_project': [{'name': 'a.xlsx', 'value': 'data/a-uuid.a.xlsx'}]
     }}
-    return render(request, 'converter.html',context=context)
+    return render(request, 'converter.html', context=context)
 
 
 def converter_upload(request):
@@ -55,5 +41,11 @@ def converter_upload(request):
                 os.makedirs(path, exist_ok=True)
             filepath = os.path.join(path, file)
             wb.save(filepath)
-    return redirect('converter')
+def convert(request):
+    return render(request, 'convert_result.html', context={'message': '处理成功'})
+
+
+# def converter_upload(request):
+#     files = request.FILES
+#     return redirect('converter')
 
