@@ -17,6 +17,6 @@ class SaveFileModel(models.Model):
 
     value = models.CharField(_('nr'), max_length=300, db_index=True, null=True, blank=True)
     class Meta():
-        db_table = 'save_fail'
+        db_table = 'save_file'
         verbose_name = _('save file')
         verbose_name_plural = _('save files')
