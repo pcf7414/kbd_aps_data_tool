@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf.urls import url
 
 urlpatterns = [
-   # path('admin/', admin.site.urls),
-    path('',include('operation_resource_tool.urls')),
+#    path('admin/', admin.site.urls),
+    path('or/',include('operation_resource_tool.urls')),
 ]
