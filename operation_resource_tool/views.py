@@ -53,7 +53,18 @@ def converter_upload(request):
             ufile.save()
     return redirect(reverse('converter')+'?upload_message=上传成功')        
 
+def get_file_absolute_path(request):
+    pa =os.path.join(settings.MEDIA_ROOT,  request.POST.get('product_attribute',''))
+    ip =os.path.join(settings.MEDIA_ROOT, request.POST.get('item_project',''))
+    print(pa)
+    print(ip)
+
+    return pa,ip
+
+
 def convert(request):
+    get_file_absolute_path(request)
+
     project_attribute = '/home/chen/Desktop/kbd_aps_data_tool/medias/机种属性.xlsx'
     item_project = '/home/chen/Desktop/kbd_aps_data_tool/medias/物料机种.xlsx'
     project_attribute_wb = load_workbook(project_attribute)
