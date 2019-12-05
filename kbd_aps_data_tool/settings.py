@@ -74,12 +74,27 @@ WSGI_APPLICATION = 'kbd_aps_data_tool.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+# Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'kbd_aps_data_tool',
+        'USER': 'postgres',
+        'PASSWORD': '123456@',
+        'HOST': '121.199.48.53',
+        'PORT': '5432',
+        # Specify the port number when using a TCP socket.
+        'OPTIONS': {},  # Backend specific configuration parameters.
+        'TEST': {
+            'NAME': 'test_aps_dev'  # Database name used when running the test suite.
+        },
+        # 'FILEUPLOADFOLDER': os.path.normpath(os.path.join(APS_LOG_DIR, 'data', 'default')),
+        # 'SECRET_WEBTOKEN_KEY': SECRET_KEY,
+    },
 }
+
+# Keep each database connection alive for 10 minutes.
+CONN_MAX_AGE = 600
 
 
 # Password validation
@@ -119,3 +134,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+# MEDIA_URL 和 STATIC_URL 必须设置为不同的值
+# MEDIA_ROOT指向存放用户上传的文件所在目录的文件系统绝对路径
+MEDIA_ROOT = os.path.join(BASE_DIR, 'medias/')
+
+MEDIA_URL = '/medias/'  # 这个是在浏览器上访问该上传文件的url的前缀
