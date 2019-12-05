@@ -2,45 +2,69 @@ import os
 from datetime import datetime
 
 from django.http import HttpResponse
+from django.urls import reverse
 from openpyxl import load_workbook, Workbook
 
 from kbd_aps_data_tool import settings
 
 from django.shortcuts import render, redirect
-
+from operation_resource_tool.models.upload_file import UploadFile
+from datetime import datetime
 
 def index(request):
-    # return render(request, 'index.html')
-    return redirect('converter')
-
+    return render(request, 'index.html')
 
 def converter(request):
-    context = {'files': {
-        'product_attribute': [{'name': 'a.xlsx', 'value': 'data/a-uuid.a.xlsx'}],
-        'item_project': [{'name': 'a.xlsx', 'value': 'data/a-uuid.a.xlsx'}]
-    }}
+    context = {
+        'files': {
+        },
+        'upload_message': request.GET.get('upload_message', ''),
+        'convert_message': request.GET.get('convert_message', '')
+    }
+    for type in ['product_attribute','item_project']:
+        context['files'][type]=[ {'name':file.name, 'value':file.pathname} for file in UploadFile.objects.filter(type=type).order_by('-id')[0:15]]
+    
     return render(request, 'converter.html', context=context)
 
 
 def converter_upload(request):
-    files = request.FILES.getlist("file")
-    if files == None or len(files) <= 0:
-        return HttpResponse('文件不能为空', status=400)
-    for file in files:
+    if request.FILES == None or len(request.FILES) <= 0:
+        return redirect(reverse('converter') + '?upload_message=文件不能为空')
+    for filetype, file in request.FILES.items():
         if file.content_type != 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':
-            return HttpResponse('请上传EXCEL文件,文件类型为.xlsx', status=400)
+            return redirect(reverse('converter') + '?upload_message=请上传EXCEL文件,文件类型为.xlsx')
         else:
-            wb = load_workbook(filename=file, read_only=True, data_only=True)
-            path = os.path.join(settings.BASE_DIR, 'output')
-            if not os.path.exists(path):
-                os.makedirs(path, exist_ok=True)
-            filepath = os.path.join(path, file)
-            wb.save(filepath)
+            name = '%s_%s' % (datetime.strftime(datetime.now(),'%y%m%d%H%M%S'), file.name)
+            path = os.path.join('input')
+            pathname=os.path.join(path,name)
+            fullpathname = os.path.join(settings.MEDIA_ROOT, pathname)
+            print(file.__dict__)
+            with open(fullpathname, '+wb') as wfile:
+                for chunk in file.chunks():
+                    wfile.write(chunk)
+
+            ufile = UploadFile(origin_name=file.name,
+                              type=filetype,
+                              name = name,
+                              pathname = pathname,
+                              created_at=datetime.now())
+            ufile.save()
+    return redirect(reverse('converter')+'?upload_message=上传成功')        
+
+def get_file_absolute_path(request):
+    pa =os.path.join(settings.MEDIA_ROOT,  request.POST.get('product_attribute',''))
+    ip =os.path.join(settings.MEDIA_ROOT, request.POST.get('item_project',''))
+    print(pa)
+    print(ip)
+
+    return pa,ip
 
 
 def convert(request):
-    project_attribute = '/home/chen/Desktop/kbd_aps_data_tool/medias/机种属性.xlsx'
-    item_project = '/home/chen/Desktop/kbd_aps_data_tool/medias/物料机种.xlsx'
+    project_attribute,item_project = get_file_absolute_path(request)
+
+    # project_attribute = '/home/chen/Desktop/kbd_aps_data_tool/medias/机种属性.xlsx'
+    # item_project = '/home/chen/Desktop/kbd_aps_data_tool/medias/物料机种.xlsx'
     project_attribute_wb = load_workbook(project_attribute)
     item_project_wb = load_workbook(item_project)
     sheet1 = project_attribute_wb[project_attribute_wb.sheetnames[0]]
@@ -126,7 +150,7 @@ def convert(request):
     operation_file_path = save_excel(operation_list, operation_name, '工序表')
     operation_resource_file_path = save_excel(operation_resource_list, operation_resource_name, '工序资源表')
     context = {'message': '处理成功',
-               'files': [operation_file_path, operation_resource_file_path]}
+               'files': [operation_name, operation_resource_name]}
 
     return render(request, 'convert_result.html', context=context)
 
@@ -146,12 +170,9 @@ def save_excel(list, filepath, title):
             j += 1
         i += 1
     # 保存于本地
-    path = os.path.join(settings.BASE_DIR, 'input')
+    path = os.path.join(settings.BASE_DIR, 'medias/output')
     if not os.path.exists(path):
         os.makedirs(path, exist_ok=True)
     filepath = os.path.join(path, filepath)
     wb.save(filepath)
     return filepath
-# def converter_upload(request):
-#     files = request.FILES
-#     return redirect('converter')

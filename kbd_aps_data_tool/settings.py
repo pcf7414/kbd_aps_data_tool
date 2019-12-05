@@ -31,7 +31,9 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    #'django.contrib.admin',
+    'grappelli',
+    'filebrowser',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     #'django.contrib.sessions',
@@ -139,3 +141,6 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'medias/')
 
 MEDIA_URL = '/medias/'  # 这个是在浏览器上访问该上传文件的url的前缀
+
+FILEBROWSER_DIRECTORY = ''
+DIRECTORY = ''

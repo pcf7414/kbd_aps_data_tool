@@ -4,8 +4,11 @@
 </head>
 
 <body>
-Hello Converter Result
-{{ message }}
-</body>
+{% load static %}
 
+<h4 style='color:blue'>{{ message }}</h4>
+{%for file in files%}
+<a href="{% get_media_prefix %}output/{{file}}">{{file}}</a><br/>
+{%endfor%}
+</body>
 </html>

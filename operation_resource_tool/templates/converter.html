@@ -6,18 +6,20 @@
 <body>
 <h4>文件上传</h4>
 <form method="post" action="/or/upload/" enctype="multipart/form-data" name="product_attribute_from">
-    机种文件: <input name="product_attribute" type="file"/>
+    机种属性文件: <input name="product_attribute" type="file"/>
     <input type="submit" value="上传"/>
 </form>
 
 <form method="post" action="/or/upload/" enctype="multipart/form-data" name="item_project_from">
-    物料工序文件: <input name="item_project" type="file">
+    物料机种文件: <input name="item_project" type="file">
     <input type="submit" value="上传"/>
 </form>
+<h4 style="color: red"> {{ upload_message }}</h4>
+
 <hr/>
 <h4>转换选择</h4>
 <form method='post' action='/or/convert/' enctype="application/x-www-form-urlencoded" name="convert_from">
-    选择机种文件:
+    选择机种属性文件:
     <select name="product_attribute">
         {% for file in files.product_attribute %}
             <option value="{{ file.value }}">{{ file.name }}</option>
@@ -25,7 +27,7 @@
     </select>
 
     <br/>
-    选择物料工序文件:
+    选择物料机种文件:
     <select name="item_project">
         {% for file in files.item_project %}
             <option value="{{ file.value }}">{{ file.name }}</option>
@@ -35,6 +37,7 @@
     <br/>
     <input type='button' value='转换' onclick="document.convert_from.submit()"/>
 </form>
+<h4 style="color: red"> {{ convert_message }}</h4>
 
 </body>
 
