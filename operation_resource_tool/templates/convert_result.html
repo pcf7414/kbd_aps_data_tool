@@ -4,8 +4,10 @@
 </head>
 
 <body>
-Hello Converter Result
-{{ message }}
+<h4 style='color:blue'>{{ message }}</h4>
+{%for file in files%}
+{{MEDIA_URL}}/output/{file}
+{%endfor%}
 </body>
 
 </html>

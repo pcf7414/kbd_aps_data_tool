@@ -13,8 +13,7 @@ from operation_resource_tool.models.upload_file import UploadFile
 from datetime import datetime
 
 def index(request):
-    # return render(request, 'index.html')
-    return redirect('converter')
+    return render(request, 'index.html')
 
 
 def converter(request):
@@ -38,10 +37,11 @@ def converter_upload(request):
             return redirect(reverse('converter') + '?upload_message=请上传EXCEL文件,文件类型为.xlsx')
         else:
             name = '%s_%s' % (datetime.strftime(datetime.now(),'%y%m%d%H%M%S'), file.name)
-            path = os.path.join('medias','input')
+            path = os.path.join('input')
             pathname=os.path.join(path,name)
+            fullpathname = os.path.join(settings.MEDIA_ROOT, pathname)
             print(file.__dict__)
-            with open(pathname, '+wb') as wfile:
+            with open(fullpathname, '+wb') as wfile:
                 for chunk in file.chunks():
                     wfile.write(chunk)
 
