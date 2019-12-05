@@ -14,6 +14,8 @@
     物料工序文件: <input name="item_project" type="file">
     <input type="submit" value="上传"/>
 </form>
+<h4 style="color: red"> {{ upload_message }}</h4>
+
 <hr/>
 <h4>转换选择</h4>
 <form method='post' action='/or/convert/' enctype="application/x-www-form-urlencoded" name="convert_from">
@@ -35,6 +37,7 @@
     <br/>
     <input type='button' value='转换' onclick="document.convert_from.submit()"/>
 </form>
+<h4 style="color: red"> {{ convert_message }}</h4>
 
 </body>
 
