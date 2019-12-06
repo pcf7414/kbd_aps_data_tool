@@ -72,7 +72,7 @@ def convert(request):
     # 表总行数
     max_row = sheet2.max_row
     # 表总列数
-    max_col = 4
+    max_col = sheet2.max_column
     item_project_list = []
     for x in range(1, max_row + 1):
         list1 = []
@@ -98,7 +98,7 @@ def convert(request):
                 item_project_dict[(k[a], k[d], k[c])] = [k[b]]
 
     max_row1 = sheet1.max_row
-    max_col1 = 7
+    max_col1 = sheet1.max_column
     project_attribute_list = []
     for x in range(1, max_row1 + 1):
         list2 = []

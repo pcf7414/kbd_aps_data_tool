@@ -2,27 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea1da5be-d5df-4865-910e-cb10b032b6af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/medias/input/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operation_resource_tool/migrations/0002_auto_20191205_0759.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operation_resource_tool/migrations/0003_auto_20191205_0922.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operation_resource_tool/models/upload_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kbd_aps_data_tool.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kbd_aps_data_tool/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/kbd_aps_data_tool/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kbd_aps_data_tool/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/kbd_aps_data_tool/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medias/.~lock.机种属性.xlsx#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/medias/.~lock.物料机种.xlsx#" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/medias/机种属性.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/medias/机种属性.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_resource_tool/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_resource_tool/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_resource_tool/templates/convert_result.html" beforeDir="false" afterPath="$PROJECT_DIR$/operation_resource_tool/templates/convert_result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_resource_tool/templates/converter.html" beforeDir="false" afterPath="$PROJECT_DIR$/operation_resource_tool/templates/converter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_resource_tool/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/operation_resource_tool/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/operation_resource_tool/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_resource_tool/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,15 +18,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operation_resource_tool/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="168">
+              <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#397#843#0" />
                 <element signature="e#881#2020#0" />
+                <element signature="e#2071#2276#0" />
+                <element signature="e#2337#6038#0" />
                 <element signature="e#2871#3111#0" />
                 <element signature="e#3385#3612#0" />
                 <element signature="e#3738#3984#0" />
@@ -59,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/operation_resource_tool/templates/converter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+            <state relative-caret-position="332">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -135,8 +116,8 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/kbd_aps_data_tool/settings.py" />
         <option value="$PROJECT_DIR$/operation_resource_tool/templates/convert_result.html" />
-        <option value="$PROJECT_DIR$/operation_resource_tool/views.py" />
         <option value="$PROJECT_DIR$/operation_resource_tool/templates/converter.html" />
+        <option value="$PROJECT_DIR$/operation_resource_tool/views.py" />
       </list>
     </option>
   </component>
@@ -169,12 +150,6 @@
               <item name="kbd_aps_data_tool" type="b2602c69:ProjectViewProjectNode" />
               <item name="kbd_aps_data_tool" type="462c0819:PsiDirectoryNode" />
               <item name="operation_resource_tool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kbd_aps_data_tool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kbd_aps_data_tool" type="462c0819:PsiDirectoryNode" />
-              <item name="operation_resource_tool" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -278,22 +253,22 @@
       <option name="presentableId" value="Default" />
       <updated>1575524046199</updated>
       <workItem from="1575524048310" duration="24657000" />
-      <workItem from="1575549869121" duration="3574000" />
+      <workItem from="1575549869121" duration="4209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28231000" />
+    <option name="totallyTimeSpent" value="28866000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1369" height="723" extended-state="6" />
+    <frame x="67" y="25" width="1849" height="903" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49863762" visible="true" weight="0.28690386" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49863762" visible="true" weight="0.21043864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5013624" side_tool="true" weight="0.15057394" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.15514334" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28330523" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40103492" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39123103" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -302,7 +277,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32715008" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.25097024" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -523,14 +498,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/operation_resource_tool/templates/converter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/operation_resource_tool/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="168">
+          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#397#843#0" />
             <element signature="e#881#2020#0" />
+            <element signature="e#2071#2276#0" />
+            <element signature="e#2337#6038#0" />
             <element signature="e#2871#3111#0" />
             <element signature="e#3385#3612#0" />
             <element signature="e#3738#3984#0" />
@@ -538,13 +522,6 @@
             <element signature="e#5018#5438#0" />
             <element signature="e#6031#6505#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/operation_resource_tool/templates/converter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
         </state>
       </provider>
     </entry>
