@@ -79,11 +79,10 @@ def convert(request):
         for y in range(1, max_col + 1):
             # 获取表中x行y列的值
             cell_data = sheet2.cell(row=x, column=y).value
-            if cell_data:
-                list1.append(cell_data)
+            list1.append(cell_data)
         item_project_list.append(list1)
     item_project_dict = {}
-    a = item_project_list[0].index('工序')
+    a = item_project_list[0].index(('工序'))
     b = item_project_list[0].index(('物料编码'))
     c = item_project_list[0].index(('机种/项目'))
     d = item_project_list[0].index(('地点编码'))
@@ -105,8 +104,7 @@ def convert(request):
         for y in range(1, max_col1 + 1):
             # 获取表中x行y列的值
             cell_data = sheet1.cell(row=x, column=y).value
-            if cell_data:
-                list2.append(cell_data)
+            list2.append(cell_data)
         project_attribute_list.append(list2)
     project_attribute_dict = {}
     # ['机种/项目', '工序', '资源编码', 'UPH', '总人力', '单位人工工时 (S/PCS)', '地点']
@@ -133,13 +131,13 @@ def convert(request):
     for k, v in item_project_dict.items():
 
         for i in v:
-            list1 = [i + '_' + k[0], k[1], k[2]]
+            list1 = [str(i) + '_' + str(k[0]), k[1], str(i)]
             operation_list.append(list1)
             try:
                 m = project_attribute_dict[k]
                 for z in m:
                     for e, f in z.items():
-                        list2 = [list1[0], e, k[1], k[2], f[0], f[1], None, None]
+                        list2 = [list1[0], e, k[1], str(i), f[0], f[1], None, None]
                         operation_resource_list.append(list2)
             except:
                 pass
