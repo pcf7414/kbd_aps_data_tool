@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea1da5be-d5df-4865-910e-cb10b032b6af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/operation_resource_tool/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/operation_resource_tool/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="ea1da5be-d5df-4865-910e-cb10b032b6af" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operation_resource_tool/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="144" column="24" lean-forward="true" selection-start-line="144" selection-start-column="24" selection-end-line="144" selection-end-column="24" />
+            <state relative-caret-position="2280">
+              <caret line="139" column="42" selection-start-line="139" selection-start-column="42" selection-end-line="139" selection-end-column="42" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#429#875#0" />
@@ -160,7 +157,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="27" />
     <option name="width" value="1839" />
@@ -304,12 +301,12 @@
       <workItem from="1575617683445" duration="8067000" />
       <workItem from="1575803093897" duration="2855000" />
       <workItem from="1575940360394" duration="6000" />
-      <workItem from="1576146978569" duration="691000" />
+      <workItem from="1576146978569" duration="1078000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42856000" />
+    <option name="totallyTimeSpent" value="43243000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1849" height="903" extended-state="6" />
@@ -319,7 +316,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.5013624" side_tool="true" weight="0.15057394" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.15514334" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17076325" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.17076325" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3027167" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -328,7 +325,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.13324709" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.31953427" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -342,6 +339,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>f</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>item_project_dict</expression-string>
         <language-id>Python</language-id>
@@ -379,11 +381,6 @@
       </expression>
       <expression>
         <expression-string>item_project_list[0].index('工序')</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>item_project_list[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -549,8 +546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/operation_resource_tool/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="144" column="24" lean-forward="true" selection-start-line="144" selection-start-column="24" selection-end-line="144" selection-end-column="24" />
+        <state relative-caret-position="2280">
+          <caret line="139" column="42" selection-start-line="139" selection-start-column="42" selection-end-line="139" selection-end-column="42" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#429#875#0" />
