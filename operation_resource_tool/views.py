@@ -127,18 +127,26 @@ def convert(request):
             except:
                 project_attribute_dict[(k[b], k[g], k[a])] = [{k[c]: (k[d], k[f],k[e],k[h])}]
     # operation_head =
-    operation_list = [['代码', '地点编码', '物料编码','工序类型']]
-    operation_resource_list = [['工序编码', '资源编码', '地点编码', '物料编码', '标准UPH', '单位人工工时', '生产批量', '资源占用数量','人力需求','前道工序']]
+    operation_list = [['代码', '地点编码', '物料编码','工序类型','前道工序']]
+    operation_resource_list = [['工序编码', '资源编码', '地点编码', '物料编码', '标准UPH', '单位人工工时', '生产批量', '资源占用数量','人力需求']]
+    item_location_list = [['物料编码','地点编码','物料族']]
     for k, v in item_project_dict.items():
 
         for i in v:
             list1 = [str(i) + '_' + str(k[0]), k[1], str(i),str(k[0])]
+            list3 = [str(i),k[1],k[2]]
+            item_location_list.append(list3)
             operation_list.append(list1)
             try:
                 m = project_attribute_dict[k]
+                l = 1
                 for z in m:
                     for e, f in z.items():
-                        list2 = [list1[0], e, k[1], str(i), f[0], f[1], None, None,f[2],f[3]]
+                        list2 = [list1[0], e, k[1], str(i), f[0], f[1], None, None,f[2]]
+                        if l == 1:
+
+                            list1.append(f[3])
+                        l+=1
                         operation_resource_list.append(list2)
             except:
                 pass
@@ -146,10 +154,12 @@ def convert(request):
     date_str = datetime.strftime(now, '%Y%m%d-%H%M%S')
     operation_name = '工序表' + date_str + '.xlsx'
     operation_resource_name = '工序资源表' + date_str + '.xlsx'
+    item_location_name = '物料地点表' + date_str + '.xlsx'
     operation_file_path = save_excel(operation_list, operation_name, '工序表')
     operation_resource_file_path = save_excel(operation_resource_list, operation_resource_name, '工序资源表')
+    save_excel(item_location_list,item_location_name, '物料地点表')
     context = {'message': '处理成功',
-               'files': [operation_name, operation_resource_name]}
+               'files': [operation_name, operation_resource_name,item_location_name]}
 
     return render(request, 'convert_result.html', context=context)
 
