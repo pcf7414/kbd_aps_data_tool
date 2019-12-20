@@ -115,7 +115,7 @@ def convert(request):
     e = project_attribute_list[0].index(('总人力'))
     f = project_attribute_list[0].index(('单位人工工时 (S/PCS)'))
     g = project_attribute_list[0].index(('地点'))
-    h = project_attribute_list[0].index(('后道工序'))
+    h = project_attribute_list[0].index(('前道工序'))
     project_attribute_list.pop(0)
     for k in project_attribute_list:
         if k:
@@ -127,7 +127,7 @@ def convert(request):
             except:
                 project_attribute_dict[(k[b], k[g], k[a])] = [{k[c]: (k[d], k[f],k[e],k[h])}]
     # operation_head =
-    operation_list = [['代码', '地点编码', '物料编码','工序类型','后道工序']]
+    operation_list = [['代码', '地点编码', '物料编码','工序类型','前道工序']]
     operation_resource_list = [['工序编码', '资源编码', '地点编码', '物料编码', '标准UPH', '单位人工工时', '生产批量', '资源占用数量','人力需求']]
     item_location_list = [['物料编码','地点编码','机种']]
     for k, v in item_project_dict.items():

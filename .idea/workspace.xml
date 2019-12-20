@@ -37,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/operation_resource_tool/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
+            <state relative-caret-position="264">
               <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -49,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kbd_aps_data_tool/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
+            <state relative-caret-position="768">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#641#673#0" expanded="true" />
@@ -61,14 +61,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operation_resource_tool/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="767">
+              <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
               <folding>
+                <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#363#399#0" />
                 <element signature="e#429#875#0" />
                 <element signature="e#913#2052#0" />
                 <element signature="e#2103#2308#0" />
-                <element signature="e#2337#6540#0" />
                 <element signature="e#6586#7068#0" />
               </folding>
             </state>
@@ -172,6 +172,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,7 +200,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,16 +311,18 @@
       <workItem from="1576631689078" duration="599000" />
       <workItem from="1576813706165" duration="291000" />
       <workItem from="1576814380793" duration="687000" />
+      <workItem from="1576822205491" duration="1636000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50836000" />
+    <option name="totallyTimeSpent" value="52472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1849" height="903" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49863762" visible="true" weight="0.24375346" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49863762" visible="true" weight="0.2465297" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5013624" side_tool="true" weight="0.15057394" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -334,7 +336,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32988358" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.31694695" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.17981888" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -555,7 +557,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/operation_resource_tool/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="264">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -565,7 +567,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kbd_aps_data_tool/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
+        <state relative-caret-position="768">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#641#673#0" expanded="true" />
@@ -606,14 +608,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/operation_resource_tool/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="767">
+          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
           <folding>
+            <element signature="e#0#9#0" expanded="true" />
             <element signature="e#363#399#0" />
             <element signature="e#429#875#0" />
             <element signature="e#913#2052#0" />
             <element signature="e#2103#2308#0" />
-            <element signature="e#2337#6540#0" />
             <element signature="e#6586#7068#0" />
           </folding>
         </state>
