@@ -115,7 +115,7 @@ def convert(request):
     e = project_attribute_list[0].index(('总人力'))
     f = project_attribute_list[0].index(('单位人工工时 (S/PCS)'))
     g = project_attribute_list[0].index(('地点'))
-    h = project_attribute_list[0].index(('前道工序'))
+    h = project_attribute_list[0].index(('后道工序'))
     project_attribute_list.pop(0)
     for k in project_attribute_list:
         if k:
