@@ -134,8 +134,11 @@ def convert(request):
 
         for i in v:
             list1 = [str(i) + '_' + str(k[0]), k[1], str(i),str(k[0])]
-            list3 = [str(i),k[1],k[2]]
-            item_location_list.append(list3)
+            if str(i) and k[1] and k[2]:
+                list3 = [str(i),k[1],k[2]]
+                if list3 not in item_location_list:
+
+                    item_location_list.append(list3)
             operation_list.append(list1)
             try:
                 m = project_attribute_dict[k]
