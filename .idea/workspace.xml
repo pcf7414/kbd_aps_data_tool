@@ -12,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/kbd_aps_data_tool$manage.coverage" NAME="manage Coverage Results" MODIFIED="1577244917902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/kbd_aps_data_tool$manage.coverage" NAME="manage Coverage Results" MODIFIED="1577323098105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="kbd_aps_data_tool" />
@@ -64,15 +64,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/operation_resource_tool/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="154" column="53" lean-forward="true" selection-start-line="154" selection-start-column="30" selection-end-line="154" selection-end-column="53" />
+            <state relative-caret-position="152">
+              <caret line="147" column="45" lean-forward="true" selection-start-line="147" selection-start-column="45" selection-end-line="147" selection-end-column="45" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#363#399#0" />
                 <element signature="e#429#875#0" />
                 <element signature="e#913#2052#0" />
                 <element signature="e#2103#2308#0" />
-                <element signature="e#6586#7068#0" />
               </folding>
             </state>
           </provider>
@@ -151,7 +150,6 @@
         <option value="$PROJECT_DIR$/operation_resource_tool/models/__init__.py" />
         <option value="$PROJECT_DIR$/operation_resource_tool/urls.py" />
         <option value="$PROJECT_DIR$/operation_resource_tool/models/file_attribute.py" />
-        <option value="$PROJECT_DIR$/operation_resource_tool/__init__.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/input/.gitignore" />
         <option value="$PROJECT_DIR$/medias/.gitignore" />
@@ -159,6 +157,7 @@
         <option value="$PROJECT_DIR$/operation_resource_tool/templates/convert_result.html" />
         <option value="$PROJECT_DIR$/operation_resource_tool/templates/converter.html" />
         <option value="$PROJECT_DIR$/kbd_aps_data_tool/settings.py" />
+        <option value="$PROJECT_DIR$/operation_resource_tool/__init__.py" />
         <option value="$PROJECT_DIR$/operation_resource_tool/views.py" />
       </list>
     </option>
@@ -318,23 +317,25 @@
       <workItem from="1577064469213" duration="1334000" />
       <workItem from="1577148965911" duration="590000" />
       <workItem from="1577169522891" duration="593000" />
-      <workItem from="1577235937639" duration="3061000" />
+      <workItem from="1577235937639" duration="3771000" />
+      <workItem from="1577322209468" duration="897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59277000" />
+    <option name="totallyTimeSpent" value="60884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1849" height="903" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49863762" visible="true" weight="0.26207662" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49863762" visible="true" weight="0.2654081" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5013624" side_tool="true" weight="0.15057394" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.15514334" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34540752" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3027167" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.13583441" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3027167" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -342,7 +343,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32988358" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.17981888" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.17935483" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -399,19 +400,39 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/operation_resource_tool/views.py</url>
-          <line>154</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/operation_resource_tool/views.py</url>
-          <line>153</line>
-          <option name="timeStamp" value="3" />
+          <line>150</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>sheet2.cell(row=x, column=y).value.strip()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>sheet2.cell(row=x, column=y).value</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>['9HVC02007001', '嘉兴生产', 'HVC02007'] in item_location_list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>item_location_list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>set(item_location_list)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>f</expression-string>
         <language-id>Python</language-id>
@@ -429,31 +450,6 @@
       </expression>
       <expression>
         <expression-string>k</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>item_project_list</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>item_project_list[0].index((' 工序'))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>item_project_list[0].index(('物料编码'))</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>item_project_list[0].index('　工序')</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>item_project_list[0].index('工序')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -574,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/operation_resource_tool/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kbd_aps_data_tool/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -605,17 +594,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/operation_resource_tool/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/operation_resource_tool/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="154" column="53" lean-forward="true" selection-start-line="154" selection-start-column="30" selection-end-line="154" selection-end-column="53" />
+        <state relative-caret-position="152">
+          <caret line="147" column="45" lean-forward="true" selection-start-line="147" selection-start-column="45" selection-end-line="147" selection-end-column="45" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#363#399#0" />
             <element signature="e#429#875#0" />
             <element signature="e#913#2052#0" />
             <element signature="e#2103#2308#0" />
-            <element signature="e#6586#7068#0" />
           </folding>
         </state>
       </provider>

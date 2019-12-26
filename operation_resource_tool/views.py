@@ -79,6 +79,8 @@ def convert(request):
         for y in range(1, max_col + 1):
             # 获取表中x行y列的值
             cell_data = sheet2.cell(row=x, column=y).value
+            if cell_data and type(cell_data) == str:
+                cell_data.strip()
             list1.append(cell_data)
         item_project_list.append(list1)
     item_project_dict = {}
@@ -104,6 +106,8 @@ def convert(request):
         for y in range(1, max_col1 + 1):
             # 获取表中x行y列的值
             cell_data = sheet1.cell(row=x, column=y).value
+            if cell_data and type(cell_data) == str:
+                cell_data.strip()
             list2.append(cell_data)
         project_attribute_list.append(list2)
     project_attribute_dict = {}
@@ -148,7 +152,7 @@ def convert(request):
                         list2 = [list1[0], e, k[1], str(i), f[0], f[1], None, None,f[2]]
                         if l == 1:
 
-                            list1.append(f[3])
+                            list1.append(str(i)+'_'+f[3])
                         l+=1
                         operation_resource_list.append(list2)
             except:
