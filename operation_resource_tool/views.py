@@ -80,11 +80,11 @@ def convert(request):
             # 获取表中x行y列的值
             cell_data = sheet2.cell(row=x, column=y).value
             if cell_data and type(cell_data) == str:
-                cell_data.strip()
+                cell_data = cell_data.strip()
             list1.append(cell_data)
         item_project_list.append(list1)
     item_project_dict = {}
-    a = item_project_list[0].index(('工序'))
+    # a = item_project_list[0].index(('工序'))
     b = item_project_list[0].index(('物料编码'))
     c = item_project_list[0].index(('机种/项目'))
     d = item_project_list[0].index(('地点编码'))
@@ -92,11 +92,11 @@ def convert(request):
     for k in item_project_list:
         if k:
             try:
-                item_project_dict[(k[a], k[d], k[c])]
+                item_project_dict[(k[d], k[c])]
 
-                item_project_dict[(k[a], k[d], k[c])].append(k[b])
+                item_project_dict[(k[d], k[c])].append(k[b])
             except:
-                item_project_dict[(k[a], k[d], k[c])] = [k[b]]
+                item_project_dict[(k[d], k[c])] = [k[b]]
 
     max_row1 = sheet1.max_row
     max_col1 = sheet1.max_column
@@ -107,7 +107,7 @@ def convert(request):
             # 获取表中x行y列的值
             cell_data = sheet1.cell(row=x, column=y).value
             if cell_data and type(cell_data) == str:
-                cell_data.strip()
+                cell_data = cell_data.strip()
             list2.append(cell_data)
         project_attribute_list.append(list2)
     project_attribute_dict = {}
@@ -124,36 +124,40 @@ def convert(request):
     for k in project_attribute_list:
         if k:
             try:
-                project_attribute_dict[(k[b], k[g], k[a])]
+                project_attribute_dict[(k[g], k[a])]
 
-                project_attribute_dict[(k[b], k[g], k[a])].append({k[c]: (k[d], k[f],k[e],k[h])})
+                project_attribute_dict[(k[g], k[a])].append({k[c]: (k[d], k[f],k[e],k[h],k[b])})
 
             except:
-                project_attribute_dict[(k[b], k[g], k[a])] = [{k[c]: (k[d], k[f],k[e],k[h])}]
-    # operation_head =
+                project_attribute_dict[(k[g], k[a])] = [{k[c]: (k[d], k[f],k[e],k[h],k[b])}]
+
     operation_list = [['代码', '地点编码', '物料编码','工序类型','前道工序']]
     operation_resource_list = [['工序编码', '资源编码', '地点编码', '物料编码', '标准UPH', '单位人工工时', '生产批量', '资源占用数量','人力需求']]
     item_location_list = [['物料编码','地点编码','机种']]
     for k, v in item_project_dict.items():
 
         for i in v:
-            list1 = [str(i) + '_' + str(k[0]), k[1], str(i),str(k[0])]
-            if str(i) and k[1] and k[2]:
-                list3 = [str(i),k[1],k[2]]
-                if list3 not in item_location_list:
-
-                    item_location_list.append(list3)
-            operation_list.append(list1)
+            pass
+            # list1 = [str(i) + '_' + str(k[0]), k[1], str(i),str(k[0])]
+            # if str(i) and k[1]:
+            #     list3 = [str(i),k[1]]
+            #     if list3 not in item_location_list:
+            #
+            #         item_location_list.append(list3)
+            # operation_list.append(list1)
             try:
                 m = project_attribute_dict[k]
-                l = 1
                 for z in m:
                     for e, f in z.items():
-                        list2 = [list1[0], e, k[1], str(i), f[0], f[1], None, None,f[2]]
-                        if l == 1:
-
-                            list1.append(str(i)+'_'+f[3])
-                        l+=1
+                        list1 = [str(i) + '_' + str(f[4]), str(k[0]), str(i),str(f[4])]
+                        if f[3]:
+                            list1.append(str(i) + '_' + str(f[3]))
+                        if list1 not in operation_list:
+                            operation_list.append(list1)
+                        list3 = [str(i), str(k[0]), str(k[1])]
+                        if list3 not in item_location_list:
+                            item_location_list.append(list3)
+                        list2 = [list1[0], e, str(k[0]), str(i), f[0], f[1], None, None,f[2]]
                         operation_resource_list.append(list2)
             except:
                 pass
